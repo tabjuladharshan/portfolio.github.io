@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+  body {
+    font-family: Arial, sans-serif;
+    background-color: #f5f5f5;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+  .form-container {
+    max-width: 600px;
+    background-color: #f9f9f9;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+    padding: 30px;
+    border-radius: 8px;
+    animation: scale 0.5s ease-in-out;
+  }
+  @keyframes scale {
+    from {
+      transform: scale(0.8);
+      opacity: 0;
+    }
+    to {
+      transform: scale(1);
+      opacity: 1;
+    }
+  }
+  .form-row {
+    margin-bottom: 20px;
+  }
+  input, textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+  textarea {
+    resize: vertical;
+  }
+  button {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  button:hover {
+    background-color: #0056b3;
+  }
+  .response {
+    margin-top: 10px;
+    color: #007bff;
+    display: none;
+  }
+</style>
+</head>
+<body>
+  <div class="form-container">
+    <h2 style="color: #333;">Contact Me</h2>
+    <form id="contact-form">
+      <div class="form-row">
+        <input type="text" id="name" name="name" required placeholder="Name">
+      </div>
+      <div class="form-row">
+        <input type="email" id="email" name="email" required placeholder="Email">
+      </div>
+      <div class="form-row">
+        <input type="text" id="country" name="country" required placeholder="Country">
+      </div>
+      <div class="form-row">
+        <textarea id="message" name="message" rows="4" required placeholder="Message"></textarea>
+      </div>
+      <button type="submit">Submit</button>
+    </form>
+    <p class="response">Thank you! Your response has been recorded.</p>
+  </div>
+
+  <script>
+    document.getElementById("contact-form").addEventListener("submit", function(event) {
+      event.preventDefault();
+      document.querySelector(".response").style.display = "block";
+    });
+  </script>
+</body>
+</html>

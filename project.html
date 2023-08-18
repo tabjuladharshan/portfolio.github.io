@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+  body {
+    font-family: Arial, sans-serif;
+    background-color: #f5f5f5;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+  .container {
+    max-width: 800px;
+    background-color: #ffffff;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+    padding: 20px;
+    animation: slide-up 1s ease-in-out;
+  }
+  .project-image {
+    max-width: 100%;
+    max-height: 400px;
+    margin-top: 20px;
+  }
+  @keyframes slide-up {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+</style>
+</head>
+<body>
+  <div class="container">
+    <h1>Project: Arm Detection in Surveillance Videos Using Deep Learning Algorithms</h1>
+    <p>
+      Developed using Python, OpenCV, YOLO (You Only Look Once).
+      This work focuses on providing a secure place using CCTV footage as a source to detect harmful weapons by applying open-source deep learning algorithms.
+      We used different algorithms like Convolutional Neural Networks and YOLO for object detection.By using bounding boxes it will show where the weapon is located in the image
+    </p>
+    <img class="project-image" src="weapon.jpeg" alt="Project Image">
+  </div>
+</body>
+</html>
